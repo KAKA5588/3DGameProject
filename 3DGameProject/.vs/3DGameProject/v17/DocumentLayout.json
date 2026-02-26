@@ -1,9 +1,93 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\3DGameProject\\",
+  "WorkspaceRootPath": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|D:\\3DGameProject\\Main\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Chase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\EnemyState_Chase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Chase.cpp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\EnemyState_Chase.cpp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Idle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\EnemyState_Idle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\AI\\EnemyBlackboard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\AI\\EnemyBlackboard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Vec3\\Vec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Vec3\\Vec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Player\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Player\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Player\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Player\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\AI\\EnemyAI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\AI\\EnemyAI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Idle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\EnemyState_Idle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\AI\\EnemyStateBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\AI\\EnemyStateBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\EnemyState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyStateMachine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\EnemyStateMachine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyStateMachine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\EnemyStateMachine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyPerception.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\EnemyPerception.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyPerception.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\EnemyPerception.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyMovement.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\EnemyMovement.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyMovement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Enemy\\EnemyMovement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Player\\PlayerController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Player\\PlayerController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\GameObject\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:GameObject\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Main\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{914ED4C4-395B-4F55-B552-A870FF4BB916}|3DGameProject.vcxproj|solutionrelative:Main\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,23 +98,297 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 18,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Enemy.cpp",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\Enemy.cpp",
+              "RelativeDocumentMoniker": "Enemy\\Enemy.cpp",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\Enemy.cpp",
+              "RelativeToolTip": "Enemy\\Enemy.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-20T02:48:16.782Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Enemy.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\Enemy.h",
+              "RelativeDocumentMoniker": "Enemy\\Enemy.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\Enemy.h",
+              "RelativeToolTip": "Enemy\\Enemy.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAUwBsAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-20T02:48:17.48Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "D:\\3DGameProject\\Main\\Main.cpp",
-              "RelativeDocumentMoniker": "Main\\Main.cpp",
-              "ToolTip": "D:\\3DGameProject\\Main\\Main.cpp",
-              "RelativeToolTip": "Main\\Main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwEAAAARAAAA",
+              "DocumentIndex": 12,
+              "Title": "EnemyState.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState.h",
+              "RelativeDocumentMoniker": "Enemy\\EnemyState.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState.h",
+              "RelativeToolTip": "Enemy\\EnemyState.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-20T02:48:19.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemyState_Idle.cpp",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Idle.cpp",
+              "RelativeDocumentMoniker": "Enemy\\EnemyState_Idle.cpp",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Idle.cpp",
+              "RelativeToolTip": "Enemy\\EnemyState_Idle.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-02-20T01:47:57.287Z",
+              "WhenOpened": "2026-02-20T02:48:20.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EnemyState_Idle.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Idle.h",
+              "RelativeDocumentMoniker": "Enemy\\EnemyState_Idle.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Idle.h",
+              "RelativeToolTip": "Enemy\\EnemyState_Idle.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-20T02:48:21.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Main\\Main.cpp",
+              "RelativeDocumentMoniker": "Main\\Main.cpp",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Main\\Main.cpp",
+              "RelativeToolTip": "Main\\Main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-25T13:20:24.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GameObject.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\GameObject\\GameObject.h",
+              "RelativeDocumentMoniker": "GameObject\\GameObject.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\GameObject\\GameObject.h",
+              "RelativeToolTip": "GameObject\\GameObject.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-26T16:36:31.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Player\\Player.h",
+              "RelativeDocumentMoniker": "Player\\Player.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Player\\Player.h",
+              "RelativeToolTip": "Player\\Player.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-26T16:36:36.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PlayerController.cpp",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Player\\PlayerController.cpp",
+              "RelativeDocumentMoniker": "Player\\PlayerController.cpp",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Player\\PlayerController.cpp",
+              "RelativeToolTip": "Player\\PlayerController.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-26T16:36:37.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EnemyMovement.cpp",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyMovement.cpp",
+              "RelativeDocumentMoniker": "Enemy\\EnemyMovement.cpp",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyMovement.cpp",
+              "RelativeToolTip": "Enemy\\EnemyMovement.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-26T23:13:36.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EnemyMovement.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyMovement.h",
+              "RelativeDocumentMoniker": "Enemy\\EnemyMovement.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyMovement.h",
+              "RelativeToolTip": "Enemy\\EnemyMovement.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-26T23:13:38.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EnemyPerception.cpp",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyPerception.cpp",
+              "RelativeDocumentMoniker": "Enemy\\EnemyPerception.cpp",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyPerception.cpp",
+              "RelativeToolTip": "Enemy\\EnemyPerception.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-26T23:13:38.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EnemyPerception.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyPerception.h",
+              "RelativeDocumentMoniker": "Enemy\\EnemyPerception.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyPerception.h",
+              "RelativeToolTip": "Enemy\\EnemyPerception.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-26T23:13:39.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EnemyStateMachine.cpp",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyStateMachine.cpp",
+              "RelativeDocumentMoniker": "Enemy\\EnemyStateMachine.cpp",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyStateMachine.cpp",
+              "RelativeToolTip": "Enemy\\EnemyStateMachine.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-26T23:13:46.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EnemyStateMachine.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyStateMachine.h",
+              "RelativeDocumentMoniker": "Enemy\\EnemyStateMachine.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyStateMachine.h",
+              "RelativeToolTip": "Enemy\\EnemyStateMachine.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAADwvw8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-26T23:13:47.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnemyBlackboard.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\AI\\EnemyBlackboard.h",
+              "RelativeDocumentMoniker": "Enemy\\AI\\EnemyBlackboard.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\AI\\EnemyBlackboard.h",
+              "RelativeToolTip": "Enemy\\AI\\EnemyBlackboard.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-26T23:23:27.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EnemyStateBase.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\AI\\EnemyStateBase.h",
+              "RelativeDocumentMoniker": "Enemy\\AI\\EnemyStateBase.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\AI\\EnemyStateBase.h",
+              "RelativeToolTip": "Enemy\\AI\\EnemyStateBase.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-26T23:24:04.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemyState_Chase.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Chase.h",
+              "RelativeDocumentMoniker": "Enemy\\EnemyState_Chase.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Chase.h",
+              "RelativeToolTip": "Enemy\\EnemyState_Chase.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAUwBIAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-26T23:27:05.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnemyState_Chase.cpp.cpp",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Chase.cpp.cpp",
+              "RelativeDocumentMoniker": "Enemy\\EnemyState_Chase.cpp.cpp",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\EnemyState_Chase.cpp.cpp",
+              "RelativeToolTip": "Enemy\\EnemyState_Chase.cpp.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-26T23:28:09.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EnemyAI.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\AI\\EnemyAI.h",
+              "RelativeDocumentMoniker": "Enemy\\AI\\EnemyAI.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Enemy\\AI\\EnemyAI.h",
+              "RelativeToolTip": "Enemy\\AI\\EnemyAI.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAUwBsAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-26T23:28:48.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Player\\Player.cpp",
+              "RelativeDocumentMoniker": "Player\\Player.cpp",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Player\\Player.cpp",
+              "RelativeToolTip": "Player\\Player.cpp",
+              "ViewState": "AQIAADoAAAAAAAAAAAAjwEcAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-26T23:35:02.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Vec3.h",
+              "DocumentMoniker": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Vec3\\Vec3.h",
+              "RelativeDocumentMoniker": "Vec3\\Vec3.h",
+              "ToolTip": "C:\\Users\\ki582\\Documents\\3DGameProject\\3DGameProject\\3DGameProject\\Vec3\\Vec3.h",
+              "RelativeToolTip": "Vec3\\Vec3.h",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAUwAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-26T23:37:34.782Z",
               "EditorCaption": ""
             }
           ]

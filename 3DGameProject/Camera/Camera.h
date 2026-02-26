@@ -3,6 +3,8 @@
 #include "../Actor/Actor.h"
 #include "../GameObject/GameObject.h"
 
+class Stage;
+
 class Camera : public GameObject
 {
 public:
@@ -13,11 +15,13 @@ public:
     void Apply();
 
     void SetTarget(Actor* target);
+    void SetStage(Stage* stage);
 
     float GetYaw() const { return yaw; }
 
 private:
     Actor* target = nullptr;
+    Stage* stage = nullptr;
 
     // ‰ñ“]
     float yaw;
@@ -34,4 +38,8 @@ private:
     // ====================================
 
     VECTOR position;
+
+    float smoothDistance;
+    float rayOffset; // ƒJƒƒ‰‚Ì‘¾‚³
 };
+

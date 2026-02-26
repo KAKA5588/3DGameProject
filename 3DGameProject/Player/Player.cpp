@@ -3,6 +3,7 @@
 #include "PlayerPhysics.h"
 #include "../Stage/Stage.h"
 #include "../Camera/Camera.h"
+#include "../Actor/Actor.h"
 #include "DxLib.h"
 
 Player::Player()
@@ -50,10 +51,25 @@ void Player::Update(float dt)
     controller->Update(*this, camera);
     physics->Update(*this, stage, dt);
 
-    MV1SetPosition(
-        modelHandle,
-        VGet(position.x, position.y, position.z)
-    );
+    // ----- ‘«‰¹”»’è -----
+    float speed = VSize(velocity);
+
+    if (isGrounded && speed > 1.0f)
+    {
+        isMakingNoise = true;
+
+        if (speed > 300.0f)      // ‘–‚è
+            noiseStrength = 600.0f;
+        else                     // •à‚«
+            noiseStrength = 300.0f;
+    }
+    else
+    {
+        isMakingNoise = false;
+        noiseStrength = 0.0f;
+    }
+
+    MV1SetPosition(modelHandle, position);
 }
 
 void Player::Draw()

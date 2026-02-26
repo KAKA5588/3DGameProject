@@ -23,6 +23,14 @@ public:
 
     bool isGrounded = false;
 
+public:
+    bool IsMakingNoise() const { return isMakingNoise; }
+    float GetNoiseStrength() const { return noiseStrength; }
+
+private:
+    bool isMakingNoise = false;
+    float noiseStrength = 0.0f;
+
 private:
     Stage* stage = nullptr;
     Camera* camera = nullptr;

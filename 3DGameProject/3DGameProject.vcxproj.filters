@@ -14,10 +14,126 @@
     <Filter Include="ソース ファイル\Main">
       <UniqueIdentifier>{b9fa4af3-c20e-4fc4-9303-ae7a2c1edb58}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Actor">
+      <UniqueIdentifier>{ce3a4941-2f98-4d0f-8588-125c263d0a17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Camera">
+      <UniqueIdentifier>{68768b65-c65b-4596-b175-1ac27c426fd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Stage">
+      <UniqueIdentifier>{7fe60b2a-28cb-437c-b4c9-df0064407ddc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MouseInput">
+      <UniqueIdentifier>{6b93ef47-dc7d-4a1e-8acb-e6bc82dfe702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\GameObject">
+      <UniqueIdentifier>{75ee7475-2bed-4e40-9cc6-ddb692b160be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Vec3">
+      <UniqueIdentifier>{f2794838-ef51-4900-8cc8-cc04aae15ae3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Enemy\AI">
+      <UniqueIdentifier>{d73e55d3-65d1-48a8-b6b9-7825514d35ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\Main.cpp">
       <Filter>ソース ファイル\Main</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy\Enemy.cpp">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy\EnemyMovement.cpp">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy\EnemyPerception.cpp">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy\EnemyState_Idle.cpp">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy\EnemyStateMachine.cpp">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\Camera.cpp">
+      <Filter>ソース ファイル\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseInput\MouseInput.cpp">
+      <Filter>ソース ファイル\MouseInput</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage\Stage.cpp">
+      <Filter>ソース ファイル\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\Player.cpp">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\PlayerController.cpp">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\PlayerPhysics.cpp">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy\EnemyState_Chase.cpp.cpp">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Enemy\Enemy.h">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\EnemyMovement.h">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\EnemyPerception.h">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\EnemyState.h">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\EnemyState_Idle.h">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\EnemyStateMachine.h">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Actor.h">
+      <Filter>ソース ファイル\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\Camera.h">
+      <Filter>ソース ファイル\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseInput\MouseInput.h">
+      <Filter>ソース ファイル\MouseInput</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\GameObject.h">
+      <Filter>ソース ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec3\Vec3.h">
+      <Filter>ソース ファイル\Vec3</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage\Stage.h">
+      <Filter>ソース ファイル\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\Player.h">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\PlayerController.h">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\PlayerPhysics.h">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\AI\EnemyBlackboard.h">
+      <Filter>ソース ファイル\Enemy\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\AI\EnemyStateBase.h">
+      <Filter>ソース ファイル\Enemy\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\EnemyState_Chase.h">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\AI\EnemyAI.h">
+      <Filter>ソース ファイル\Enemy\AI</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,18 +1,13 @@
 #include "EnemyState_Idle.h"
-#include "Enemy.h"
-#include <DxLib.h>
+#include "EnemyState_Chase.h"
 
-void EnemyState_Idle::Initialize(Enemy*)
+EnemyStateBase* EnemyState_Idle::CheckTransition(EnemyBlackboard& bb)
 {
-    printfDx("[Enemy] Enter Idle State\n");
-}
+    // 見えたら追跡開始
+    if (bb.canSeePlayer)
+    {
+        return EnemyState_Chase::Instance();
+    }
 
-void EnemyState_Idle::Update(Enemy*, float)
-{
-    // 今は何もしない（後で探索・検知を入れる）
-}
-
-void EnemyState_Idle::Terminate(Enemy*)
-{
-    printfDx("[Enemy] Exit Idle State\n");
+    return this;
 }

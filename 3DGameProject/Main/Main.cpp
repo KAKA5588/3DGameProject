@@ -34,6 +34,7 @@ int WINAPI WinMain(
     camera.SetTarget(&player);
     player.SetCamera(&camera);
     player.SetStage(&stage);
+    camera.SetStage(&stage);
 
     std::vector<GameObject*> objects =
     {

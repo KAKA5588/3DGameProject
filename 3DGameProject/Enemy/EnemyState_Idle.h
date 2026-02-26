@@ -1,10 +1,25 @@
 #pragma once
-#include "EnemyState.h"
+#include "../Enemy/AI/EnemyStateBase.h"
 
-class EnemyState_Idle : public EnemyState
+class EnemyState_Idle : public EnemyStateBase
 {
 public:
-    void Initialize(Enemy* enemy) override;
-    void Update(Enemy* enemy, float dt) override;
-    void Terminate(Enemy* enemy) override;
+    static EnemyState_Idle* Instance()
+    {
+        static EnemyState_Idle instance;
+        return &instance;
+    }
+
+    void Enter(EnemyBlackboard& bb) override
+    {
+        bb.timer = 0.0f;
+        bb.velocity = VGet(0, 0, 0);
+    }
+
+    void Update(EnemyBlackboard& bb, float dt) override
+    {
+        bb.timer += dt;
+    }
+
+    EnemyStateBase* CheckTransition(EnemyBlackboard& bb) override;
 };
