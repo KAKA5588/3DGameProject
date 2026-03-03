@@ -1,5 +1,5 @@
 #pragma once
-#include "../Vec3/Vec3.h"   // Åö í«â¡
+#include "../Vec3/Vec3.h"   
 
 class Player;
 class Stage;

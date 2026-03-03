@@ -4,22 +4,9 @@
 class EnemyState_Idle : public EnemyStateBase
 {
 public:
-    static EnemyState_Idle* Instance()
-    {
-        static EnemyState_Idle instance;
-        return &instance;
-    }
+    static EnemyState_Idle* Instance();
 
-    void Enter(EnemyBlackboard& bb) override
-    {
-        bb.timer = 0.0f;
-        bb.velocity = VGet(0, 0, 0);
-    }
-
-    void Update(EnemyBlackboard& bb, float dt) override
-    {
-        bb.timer += dt;
-    }
-
+    void Enter(EnemyBlackboard& bb) override;
+    void Update(EnemyBlackboard& bb, float dt) override;
     EnemyStateBase* CheckTransition(EnemyBlackboard& bb) override;
 };

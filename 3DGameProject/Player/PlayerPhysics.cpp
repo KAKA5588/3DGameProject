@@ -31,11 +31,7 @@ void PlayerPhysics::ApplyGravity(Player& player, float dt)
     }
 }
 
-/*
-----------------------------------
-    床判定（下向きレイ）
-----------------------------------
-*/
+// 床判定（下向きレイ）
 void PlayerPhysics::ResolveFloor(Player& player, Stage* stage, Vec3& nextPos)
 {
     player.isGrounded = false;
@@ -73,11 +69,7 @@ void PlayerPhysics::ResolveFloor(Player& player, Stage* stage, Vec3& nextPos)
     }
 }
 
-/*
-----------------------------------
-    壁判定（横方向4本）
-----------------------------------
-*/
+// 壁判定（横方向4本）
 void PlayerPhysics::ResolveWall(Player& player, Stage* stage, Vec3& nextPos)
 {
     if (!stage) return;

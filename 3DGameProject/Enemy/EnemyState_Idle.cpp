@@ -1,13 +1,32 @@
 #include "EnemyState_Idle.h"
 #include "EnemyState_Chase.h"
 
+EnemyState_Idle* EnemyState_Idle::Instance()
+{
+    static EnemyState_Idle instance;
+    return &instance;
+}
+
+void EnemyState_Idle::Enter(EnemyBlackboard& bb)
+{
+    bb.timer = 0.0f;
+    bb.velocity = Vec3(0, 0, 0);   // ← Vec3版
+}
+
+void EnemyState_Idle::Update(EnemyBlackboard& bb, float dt)
+{
+    bb.timer += dt;
+
+    // Idle中は常に止める（安全策）
+    bb.velocity = Vec3(0, 0, 0);
+}
+
 EnemyStateBase* EnemyState_Idle::CheckTransition(EnemyBlackboard& bb)
 {
-    // 見えたら追跡開始
     if (bb.canSeePlayer)
     {
         return EnemyState_Chase::Instance();
     }
 
-    return this;
+    return nullptr;
 }

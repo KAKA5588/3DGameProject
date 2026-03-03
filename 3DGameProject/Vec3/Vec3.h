@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include <cmath>
-#include "DxLib.h"   // ← これを必ず上に！
+#include "DxLib.h"
 
 struct Vec3
 {
@@ -41,9 +41,22 @@ struct Vec3
         return *this;
     }
 
+    Vec3& operator*=(float s)
+    {
+        x *= s;
+        y *= s;
+        z *= s;
+        return *this;
+    }
+
     float Length() const
     {
         return std::sqrt(x * x + y * y + z * z);
+    }
+
+    float LengthSq() const
+    {
+        return x * x + y * y + z * z;
     }
 
     Vec3 Normalized() const
@@ -51,5 +64,19 @@ struct Vec3
         float len = Length();
         if (len < 0.0001f) return {};
         return (*this) * (1.0f / len);
+    }
+
+    float Dot(const Vec3& rhs) const
+    {
+        return x * rhs.x + y * rhs.y + z * rhs.z;
+    }
+
+    Vec3 Cross(const Vec3& rhs) const
+    {
+        return {
+            y * rhs.z - z * rhs.y,
+            z * rhs.x - x * rhs.z,
+            x * rhs.y - y * rhs.x
+        };
     }
 };

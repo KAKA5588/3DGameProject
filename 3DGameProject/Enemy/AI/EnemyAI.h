@@ -1,27 +1,12 @@
 #pragma once
 #include "EnemyStateBase.h"
+#include "EnemyBlackboard.h"
 
 class EnemyAI
 {
 public:
-    void Initialize(EnemyStateBase* startState, EnemyBlackboard& bb)
-    {
-        currentState = startState;
-        currentState->Enter(bb);
-    }
-
-    void Update(EnemyBlackboard& bb, float dt)
-    {
-        currentState->Update(bb, dt);
-
-        EnemyStateBase* next = currentState->CheckTransition(bb);
-
-        if (next != currentState)
-        {
-            currentState = next;
-            currentState->Enter(bb);
-        }
-    }
+    void Initialize(EnemyStateBase* startState, EnemyBlackboard& bb);
+    void Update(EnemyBlackboard& bb, float dt);
 
 private:
     EnemyStateBase* currentState = nullptr;

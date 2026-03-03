@@ -3,32 +3,46 @@
 
 Enemy::Enemy()
 {
-    position = VGet(235.0f, 323.0f, 8436.0f);
+    position = Vec3(1802.0f, 1141.0f, 2375.0f);
+}
+
+Enemy::~Enemy()
+{
+    if (enemyHandle != -1)
+    {
+        MV1DeleteModel(enemyHandle);
+        enemyHandle = -1;
+    }
 }
 
 void Enemy::Initialize()
 {
     blackboard.pos = position;
+
+    enemyHandle = MV1LoadModel("Resource/Enemy/golem.mv1");
+
     ai.Initialize(EnemyState_Idle::Instance(), blackboard);
 }
 
 void Enemy::Update(float dt)
 {
-    // プレイヤーとの距離
-    VECTOR diff = VSub(playerPos, blackboard.pos);
-    float dist = VSize(diff);
+    // ===== AI処理 =====
 
-    blackboard.playerPos = playerPos;
+    Vec3 diff = blackboard.playerPos - blackboard.pos;
+    float dist = diff.Length();
 
-    // 視覚判定
     blackboard.canSeePlayer = false;
 
     if (dist < blackboard.viewRange)
     {
-        VECTOR forward = VGet(0, 0, 1); // 今は仮で前向き固定
-        VECTOR dir = VNorm(diff);
+        Vec3 forward = Vec3(0, 0, 1);
+        Vec3 dir = diff.Normalized();
 
-        float dot = VDot(forward, dir);
+        float dot =
+            forward.x * dir.x +
+            forward.y * dir.y +
+            forward.z * dir.z;
+
         float angle = acosf(dot) * 180.0f / DX_PI_F;
 
         if (angle < blackboard.viewAngle * 0.5f)
@@ -37,39 +51,34 @@ void Enemy::Update(float dt)
         }
     }
 
-    
-    // 聴覚判定
     blackboard.canHearPlayer = false;
 
     if (blackboard.playerMadeSound &&
         dist < blackboard.hearRange)
     {
         blackboard.canHearPlayer = true;
-        blackboard.lastHeardPos = playerPos;
+        blackboard.lastHeardPos = blackboard.playerPos;
     }
 
-    // AI更新
     ai.Update(blackboard, dt);
 
+    // ===== AI結果を物理へ渡す =====
     position = blackboard.pos;
+
+    // 物理更新（重力・床判定）
+    physics.Update(*this, stage, dt);
+
+    // 物理結果をblackboardへ戻す
+    blackboard.pos = position;
+
+    // モデルへ反映
+    MV1SetPosition(
+        enemyHandle,
+        VGet(position.x, position.y, position.z)
+    );
 }
 
 void Enemy::Draw()
 {
-    VECTOR minPos = VGet(
-        position.x - size.x * 0.5f,
-        position.y,
-        position.z - size.z * 0.5f
-    );
-
-    VECTOR maxPos = VGet(
-        position.x + size.x * 0.5f,
-        position.y + size.y,
-        position.z + size.z * 0.5f
-    );
-
-    DrawCube3D(minPos, maxPos,
-        GetColor(255, 0, 0),
-        GetColor(0, 0, 0),
-        TRUE);
+    MV1DrawModel(enemyHandle);
 }
