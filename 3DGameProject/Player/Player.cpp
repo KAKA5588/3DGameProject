@@ -74,6 +74,9 @@ void Player::Update(float dt)
 
 void Player::Draw()
 {
+    //“G‚ª’Ç‚Á‚Ä‚¢‚é’†S“_
+    DrawSphere3D(position, 20.0f, 16, GetColor(255, 0, 0), GetColor(255, 0, 0), TRUE);
+
     if (modelHandle != -1)
     {
         MV1DrawModel(modelHandle);

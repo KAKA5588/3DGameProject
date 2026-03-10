@@ -15,13 +15,15 @@ Enemy::~Enemy()
     }
 }
 
+#include "EnemyState_Search.h"
+
 void Enemy::Initialize()
 {
     blackboard.pos = position;
 
     enemyHandle = MV1LoadModel("Resource/Enemy/golem.mv1");
 
-    ai.Initialize(EnemyState_Idle::Instance(), blackboard);
+    ai.Initialize(EnemyState_Search::Instance(), blackboard);
 }
 
 void Enemy::Update(float dt)
@@ -35,7 +37,7 @@ void Enemy::Update(float dt)
 
     if (dist < blackboard.viewRange)
     {
-        Vec3 forward = Vec3(0, 0, 1);
+        Vec3 forward = blackboard.forward;
         Vec3 dir = diff.Normalized();
 
         float dot =
@@ -60,21 +62,31 @@ void Enemy::Update(float dt)
         blackboard.lastHeardPos = blackboard.playerPos;
     }
 
+    // AI更新
     ai.Update(blackboard, dt);
 
-    // ===== AI結果を物理へ渡す =====
-    position = blackboard.pos;
+    // ★ 移動反映
+    blackboard.pos += blackboard.velocity * dt;
 
-    // 物理更新（重力・床判定）
+    // 物理へ
+    position = blackboard.pos;
     physics.Update(*this, stage, dt);
 
-    // 物理結果をblackboardへ戻す
+    // 物理結果を戻す
     blackboard.pos = position;
 
     // モデルへ反映
     MV1SetPosition(
         enemyHandle,
         VGet(position.x, position.y, position.z)
+    );
+    // ===== モデル回転 =====
+    float yaw = atan2f(blackboard.forward.x, blackboard.forward.z);
+    yaw += DX_PI_F;
+    // Y軸回転をセット
+    MV1SetRotationXYZ(
+        enemyHandle,
+        VGet(0.0f, yaw, 0.0f)
     );
 }
 

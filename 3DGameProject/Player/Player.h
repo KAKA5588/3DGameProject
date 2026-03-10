@@ -26,6 +26,8 @@ public:
 public:
     bool IsMakingNoise() const { return isMakingNoise; }
     float GetNoiseStrength() const { return noiseStrength; }
+    //ターゲット
+    const VECTOR& GetPosition() const { return position; }
 
 private:
     bool isMakingNoise = false;

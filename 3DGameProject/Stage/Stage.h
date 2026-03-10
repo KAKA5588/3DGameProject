@@ -6,6 +6,13 @@ public:
     Stage();
     ~Stage();
 
+    //唯一のインスタンスの取得
+    static Stage* Instance()
+    {
+        static Stage instance;
+        return &instance;
+    }
+
     void Initialize() override;
     void Update(float dt) override; // ← これだけでOK
     void Draw() override;

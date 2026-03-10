@@ -56,6 +56,9 @@ int WINAPI WinMain(
         ClearDrawScreen();
         float dt = 1.0f / 60.0f;
 
+        // ƒvƒŒƒCƒ„[ˆÊ’u‚ð“G‚Ö“n‚·
+        enemy.SetPlayerPos(player.GetPosition());
+
         for (auto obj : objects)
         {
             obj->Update(dt);
@@ -70,7 +73,6 @@ int WINAPI WinMain(
 
         ScreenFlip();
     }
-
     DxLib_End();
     return 0;
 }

@@ -6,17 +6,24 @@ struct Vec3
 {
     float x{}, y{}, z{};
 
-    Vec3() = default;
-    Vec3(float _x, float _y, float _z) : x(_x), y(_y), z(_z) {}
+    // ===== コンストラクタ =====
 
+    Vec3() = default;
+
+    Vec3(float _x, float _y, float _z)
+        : x(_x), y(_y), z(_z) {}
+
+    // DxLibのVECTORから変換
+    Vec3(const VECTOR& v)
+        : x(v.x), y(v.y), z(v.z) {}
+
+    // Vec3 → VECTOR 変換
     operator VECTOR() const
     {
-        VECTOR v;
-        v.x = x;
-        v.y = y;
-        v.z = z;
-        return v;
+        return VGet(x, y, z);
     }
+
+    // ===== 演算子 =====
 
     Vec3 operator+(const Vec3& rhs) const
     {
@@ -48,6 +55,8 @@ struct Vec3
         z *= s;
         return *this;
     }
+
+    //  数学関数 
 
     float Length() const
     {
