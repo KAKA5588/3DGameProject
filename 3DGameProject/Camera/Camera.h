@@ -12,6 +12,7 @@ public:
 
     void Initialize() override;
     void Update(float dt) override;
+    void Draw() override;
     void Apply();
 
     void SetTarget(Actor* target);
@@ -36,6 +37,8 @@ private:
     float pitchMin;
     float pitchMax;
     // ====================================
+    //ƒ‰ƒCƒg
+    int flashHandle = -1;
 
     VECTOR position;
 

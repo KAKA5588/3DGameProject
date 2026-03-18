@@ -35,3 +35,4 @@ struct EnemyBlackboard
     //•Ç”»’è‚ðŒã‰ñ‚µ‚É‚·‚é‚Ì‚ÅŽ~‚Ü‚Á‚Ä‚¢‚½‚çŒü‚«‚ð•Ï‚¦‚é
     //float stuckTimer = 0.0f;   // “®‚¢‚Ä‚¢‚È‚¢ŽžŠÔ
 };
+
