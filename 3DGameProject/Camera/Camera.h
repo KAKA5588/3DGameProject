@@ -39,7 +39,10 @@ private:
     // ====================================
     //ƒ‰ƒCƒg
     int flashHandle = -1;
+    int lightHandle = -1;
+    int pointLightHandle;
 
+    float currentLightRange = 5000.0f;
     VECTOR position;
 
     float smoothDistance;

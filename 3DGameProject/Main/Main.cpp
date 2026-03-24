@@ -21,6 +21,16 @@ int WINAPI WinMain(
         return -1;
     }
 
+    // デフォルトライトを削除
+    while (DeleteLightHandle(0) != -1) {}
+
+    // 念のため全ライト無効化
+    SetLightEnable(FALSE);
+
+    // Zバッファなど
+    SetDrawScreen(DX_SCREEN_BACK);
+    SetUseZBuffer3D(TRUE);
+    SetWriteZBuffer3D(TRUE);
     SetDrawScreen(DX_SCREEN_BACK);
     SetUseZBuffer3D(TRUE);
     SetWriteZBuffer3D(TRUE);

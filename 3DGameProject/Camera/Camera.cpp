@@ -1,6 +1,5 @@
-#include "Camera.h"
+ï»¿#include "Camera.h"
 #include "../MouseInput/MouseInput.h"
-#include "../Stage/Stage.h"
 #include <cmath>
 
 Camera::Camera()
@@ -8,36 +7,61 @@ Camera::Camera()
     yaw = 0.0f;
     pitch = 0.0f;
 
-    distance = 0.0f;          
-    targetHeight = 180.0f;    // –Ú‚Ì‚‚³
+    targetHeight = 180.0f;
     mouseSensitivity = 0.002f;
 
     pitchMin = -DX_PI_F / 3.0f;
     pitchMax = DX_PI_F / 3.0f;
-
-    flashHandle = -1;
 }
 
 void Camera::SetTarget(Actor* actor)
 {
     target = actor;
 }
-
 void Camera::Initialize()
 {
     SetMouseDispFlag(FALSE);
 
+    DeleteLightHandle(0);
+
+    // å°‘ã—ã ã‘ç’°å¢ƒå…‰ã‚¢ãƒƒãƒ—ï¼ˆçœŸã£æš—ã™ãé˜²æ­¢ï¼‰
+    COLOR_F ambient;
+    ambient.r = 0.01f;
+    ambient.g = 0.01f;
+    ambient.b = 0.01f;
+    ambient.a = 1.0f;
+
+    SetGlobalAmbientLight(ambient);
+    SetUseLighting(TRUE);
+
     flashHandle = MV1LoadModel("Resource/Flash/Flash.mv1");
-
-    if (flashHandle == -1)
-    {
-        printfDx("Flash model load failed\n");
-    }
-
-    // 30”{ƒXƒP[ƒ‹
     MV1SetScale(flashHandle, VGet(4.0f, 4.0f, 4.0f));
-}
 
+    // åºƒãã¦å¼·ã„ã‚¹ãƒãƒƒãƒˆãƒ©ã‚¤ãƒˆ
+    lightHandle = CreateSpotLightHandle(
+        VGet(0, 0, 0),
+        VGet(0, 0, 1),
+        DX_PI_F / 6.0f,     // â˜… å†…è§’ã‹ãªã‚Šåºƒã„
+        DX_PI_F / 3.0f,     // â˜… å¤–è§’ã•ã‚‰ã«åºƒã„
+        3000.0f,            // â˜… å›ºå®šè·é›¢ï¼ˆå®‰å®šï¼‰
+        15.0f,              // â˜… æ˜ã‚‹ã•ã‹ãªã‚Šå¼·ã„
+        0.000001f,          // â˜… æ¸›è¡°ã‹ãªã‚Šå¼±ã„
+        0.0f
+    );
+
+    SetLightEnableHandle(lightHandle, TRUE);
+
+    // è¿‘è·é›¢ç”¨ãƒã‚¤ãƒ³ãƒˆãƒ©ã‚¤ãƒˆå¼·åŒ–
+    pointLightHandle = CreatePointLightHandle(
+        VGet(0, 0, 0),
+        500.0f,     // æœ‰åŠ¹è·é›¢ã‚¢ãƒƒãƒ—
+        4.0f,       // æ˜ã‚‹ã•ã‚¢ãƒƒãƒ—
+        0.0005f,    // æ¸›è¡°å¼±ã‚
+        0.0f
+    );
+
+    SetLightEnableHandle(pointLightHandle, TRUE);
+}
 void Camera::Update(float dt)
 {
     if (!target) return;
@@ -50,16 +74,12 @@ void Camera::Update(float dt)
     if (pitch < pitchMin) pitch = pitchMin;
     if (pitch > pitchMax) pitch = pitchMax;
 
-    // ===== ˆêlÌƒJƒƒ‰ˆÊ’u =====
-    VECTOR targetPos = VGet(
+    position = VGet(
         target->position.x,
         target->position.y + targetHeight,
         target->position.z
     );
 
-    position = targetPos;
-
-    // ===== ƒJƒƒ‰‘O•ûŒü =====
     VECTOR forward = VGet(
         cosf(pitch) * sinf(yaw),
         sinf(pitch),
@@ -67,23 +87,28 @@ void Camera::Update(float dt)
     );
 
     VECTOR right = VNorm(VCross(forward, VGet(0, 1, 0)));
-    VECTOR up = VGet(0, 1, 0);
+    VECTOR up = VNorm(VCross(right, forward));
 
-    // ===== ‰E‰ºƒIƒtƒZƒbƒg =====
-    VECTOR flashPos = VAdd(position,
+    VECTOR drawPos = VAdd(position,
         VAdd(
-            VScale(forward, 40.0f),   // ‘O
+            VScale(forward, 100.0f),
             VAdd(
-                VScale(right, 20.0f), // ‰E
-                VScale(up, -20.0f)    // ‰º
+                VScale(right, -60.0f),
+                VScale(up, -30.0f)
             )
         )
     );
 
-    MV1SetPosition(flashHandle, flashPos);
+    // ãƒ¢ãƒ‡ãƒ«æ›´æ–°
+    MV1SetPosition(flashHandle, drawPos);
+    MV1SetRotationXYZ(flashHandle, VGet(pitch, yaw - DX_PI_F / 2.0f, 0));
 
-    // ƒ‚ƒfƒ‹Œü‚«’²®i•K—v‚È‚ç +DX_PI_F Á‚µ‚Ä‚­‚¾‚³‚¢j
-    MV1SetRotationXYZ(flashHandle, VGet(pitch, yaw + DX_PI_F, 0));
+    // ãƒ©ã‚¤ãƒˆæ›´æ–°
+    SetLightPositionHandle(lightHandle, drawPos);
+    SetLightDirectionHandle(lightHandle, forward);
+
+    // â˜… è¿‘è·é›¢ãƒã‚¤ãƒ³ãƒˆãƒ©ã‚¤ãƒˆã‚’ã‚«ãƒ¡ãƒ©ä½ç½®ã«
+    SetLightPositionHandle(pointLightHandle, position);
 }
 
 void Camera::Apply()
@@ -99,7 +124,6 @@ void Camera::Apply()
     VECTOR cameraTarget = VAdd(position, forward);
 
     SetCameraPositionAndTarget_UpVecY(position, cameraTarget);
-
     SetCameraNearFar(1.0f, 10000.0f);
 }
 
@@ -107,37 +131,6 @@ void Camera::Draw()
 {
     if (flashHandle == -1) return;
 
-    // ƒJƒƒ‰‘O•ûŒü
-    VECTOR forward = VGet(
-        cosf(pitch) * sinf(yaw),
-        sinf(pitch),
-        cosf(pitch) * cosf(yaw)
-    );
-
-    // ‰EƒxƒNƒgƒ‹‚ğÄŒvZi’´d—vj
-    VECTOR right = VNorm(VCross(forward, VGet(0, 1, 0)));
-
-    // ãƒxƒNƒgƒ‹‚ğÄŒvZiˆÀ’è—pj
-    VECTOR up = VNorm(VCross(right, forward));
-
-    // ===== ‰E‰ºŒÅ’èƒIƒtƒZƒbƒg =====
-    VECTOR drawPos = VAdd(position,
-        VAdd(
-            VScale(forward, 100.0f),  // ‘O‚Éo‚·
-            VAdd(
-                VScale(right, -60.0f),  // ‰E
-                VScale(up, -30.0f)     // ‰º
-            )
-        )
-    );
-
-    MV1SetPosition(flashHandle, drawPos);
-    MV1SetRotationXYZ(
-        flashHandle,
-        VGet(pitch, yaw - DX_PI_F / 2.0f, 0)
-    );
-
-    // •Ší‚ÍZ–³Œø
     SetUseZBuffer3D(FALSE);
     SetWriteZBuffer3D(FALSE);
 
