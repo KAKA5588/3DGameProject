@@ -47,5 +47,12 @@ private:
 
     float smoothDistance;
     float rayOffset; // カメラの太さ
+
+    // ===== フリーカメラ用 =====
+    bool isFreeCamera = false;
+
+    VECTOR freePosition;
+    float freeSpeed = 800.0f;   // 移動速度
+    // ==========================
 };
 

@@ -9,5 +9,5 @@ public:
     void Update(Player& player, Camera* camera);
 
 private:
-    float moveSpeed = 200.0f;
+    float moveSpeed = 220.0f;
 };

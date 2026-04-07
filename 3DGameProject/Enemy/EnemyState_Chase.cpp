@@ -1,5 +1,5 @@
 #include "EnemyState_Chase.h"
-#include "EnemyState_Search.h"
+#include "EnemyState_Patrol.h"
 
 EnemyState_Chase* EnemyState_Chase::Instance()
 {
@@ -33,7 +33,9 @@ void EnemyState_Chase::Update(EnemyBlackboard& bb, float dt)
 EnemyStateBase* EnemyState_Chase::CheckTransition(EnemyBlackboard& bb)
 {
     if (bb.lostTimer > bb.lostTimeLimit)
-        return EnemyState_Search::Instance();
+    {
+        return EnemyState_Patrol::Instance();
+    }
 
     return nullptr;
 }

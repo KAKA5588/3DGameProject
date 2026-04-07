@@ -1,5 +1,6 @@
 #pragma once
 #include "../../Vec3/Vec3.h"
+#include <vector>
 
 struct EnemyBlackboard
 {
@@ -29,8 +30,12 @@ struct EnemyBlackboard
 
     bool playerMadeSound = false;// プレイヤーが音を出しているか
 
-    bool hitWall = false;// 壁に衝突したか
+    bool hitWall = false;// 壁に衝突したかz
 
+    //探索ルート
+    std::vector<Vec3> patrolPoints;
+    int patrolIndex = 0;
+    bool patrolForward = true;  // true = 1→7 / false = 7→1
     //************************************
     //壁判定を後回しにするので止まっていたら向きを変える
     //float stuckTimer = 0.0f;   // 動いていない時間

@@ -74,11 +74,11 @@ void Player::Update(float dt)
 
 void Player::Draw()
 {
-    //敵が追っている中心点
-    DrawSphere3D(position, 20.0f, 16, GetColor(255, 0, 0), GetColor(255, 0, 0), TRUE);
+    ////敵が追っている中心点
+    //DrawSphere3D(position, 20.0f, 16, GetColor(255, 0, 0), GetColor(255, 0, 0), TRUE);
 
-    if (modelHandle != -1)
-    {
-        MV1DrawModel(modelHandle);
-    }
+    //if (modelHandle != -1)
+    //{
+    //    MV1DrawModel(modelHandle);
+    //}
 }

@@ -111,6 +111,83 @@ void Camera::Update(float dt)
     SetLightPositionHandle(pointLightHandle, position);
 }
 
+//void Camera::Initialize()
+//{
+//    SetMouseDispFlag(FALSE);
+//
+//    // 追加：フリーカメラ初期位置
+//    freePosition = VGet(0, 300, -500);
+//
+//    DeleteLightHandle(0);
+//}
+
+//void Camera::Update(float dt)
+//{
+//    MouseInput::Update();
+//
+//    // ===== Fキーでモード切替 =====
+//    if (CheckHitKey(KEY_INPUT_F) == 1)
+//    {
+//        isFreeCamera = !isFreeCamera;
+//
+//        // フリーに入る瞬間、現在位置をコピー
+//        if (isFreeCamera)
+//        {
+//            freePosition = position;
+//        }
+//    }
+//
+//    // =============================
+//
+//    // マウス回転（共通）
+//    yaw += MouseInput::GetDeltaX() * mouseSensitivity;
+//    pitch -= MouseInput::GetDeltaY() * mouseSensitivity;
+//
+//    if (pitch < pitchMin) pitch = pitchMin;
+//    if (pitch > pitchMax) pitch = pitchMax;
+//
+//    VECTOR forward = VGet(
+//        cosf(pitch) * sinf(yaw),
+//        sinf(pitch),
+//        cosf(pitch) * cosf(yaw)
+//    );
+//
+//    VECTOR right = VNorm(VCross(forward, VGet(0, 1, 0)));
+//
+//    // =============================
+//    //  フリーカメラ
+//    // =============================
+//    if (isFreeCamera)
+//    {
+//        if (CheckHitKey(KEY_INPUT_W)) freePosition = VAdd(freePosition, VScale(forward, freeSpeed * dt));
+//        if (CheckHitKey(KEY_INPUT_S)) freePosition = VAdd(freePosition, VScale(forward, -freeSpeed * dt));
+//        if (CheckHitKey(KEY_INPUT_D)) freePosition = VAdd(freePosition, VScale(right, freeSpeed * dt));
+//        if (CheckHitKey(KEY_INPUT_A)) freePosition = VAdd(freePosition, VScale(right, -freeSpeed * dt));
+//        if (CheckHitKey(KEY_INPUT_SPACE)) freePosition.y += freeSpeed * dt;
+//        if (CheckHitKey(KEY_INPUT_LSHIFT)) freePosition.y -= freeSpeed * dt;
+//
+//        position = freePosition;
+//    }
+//    // =============================
+//    //  通常カメラ（今まで通り）
+//    // =============================
+//    else
+//    {
+//        if (!target) return;
+//
+//        position = VGet(
+//            target->position.x,
+//            target->position.y + targetHeight,
+//            target->position.z
+//        );
+//    }
+//
+//    // ===== ライト更新（共通）=====
+//    SetLightPositionHandle(lightHandle, position);
+//    SetLightDirectionHandle(lightHandle, forward);
+//    SetLightPositionHandle(pointLightHandle, position);
+//}
+
 void Camera::Apply()
 {
     if (!target) return;
@@ -139,6 +216,51 @@ void Camera::Draw()
     SetUseZBuffer3D(TRUE);
     SetWriteZBuffer3D(TRUE);
 }
+
+//void Camera::Draw()
+//{
+//    if (flashHandle != -1)
+//    {
+//        SetUseZBuffer3D(FALSE);
+//        SetWriteZBuffer3D(FALSE);
+//
+//        MV1DrawModel(flashHandle);
+//
+//        SetUseZBuffer3D(TRUE);
+//        SetWriteZBuffer3D(TRUE);
+//    }
+//
+//    // =========================
+//    // デバッグ座標表示
+//    // =========================
+//    SetDrawBlendMode(DX_BLENDMODE_ALPHA, 200);
+//
+//    DrawFormatString(
+//        20, 20,
+//        GetColor(0, 255, 0),
+//        "Camera Pos : X=%.2f  Y=%.2f  Z=%.2f",
+//        position.x,
+//        position.y,
+//        position.z
+//    );
+//
+//    DrawFormatString(
+//        20, 45,
+//        GetColor(0, 200, 255),
+//        "Yaw=%.2f  Pitch=%.2f",
+//        yaw,
+//        pitch
+//    );
+//
+//    DrawFormatString(
+//        20, 70,
+//        GetColor(255, 200, 0),
+//        "Mode : %s",
+//        isFreeCamera ? "FREE CAMERA" : "PLAYER CAMERA"
+//    );
+//
+//    SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
+//}
 
 void Camera::SetStage(Stage* s)
 {
