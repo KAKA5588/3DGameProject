@@ -16,8 +16,6 @@ Enemy::~Enemy()
     }
 }
 
-#include "EnemyState_Search.h"
-
 void Enemy::Initialize()
 {
     blackboard.pos = position;

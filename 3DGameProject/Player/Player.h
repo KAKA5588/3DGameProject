@@ -29,9 +29,17 @@ public:
     //ターゲット
     const VECTOR& GetPosition() const { return position; }
 
+public:
+
+    float gravity = -1200.0f;       // 重力
+    float maxFallSpeed = -2500.0f;  // 最大落下速度
+
 private:
     bool isMakingNoise = false;
     float noiseStrength = 0.0f;
+
+    //足音ループ管理
+    bool isFootStepPlaying = false;
 
 private:
     Stage* stage = nullptr;

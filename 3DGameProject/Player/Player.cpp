@@ -4,6 +4,7 @@
 #include "../Stage/Stage.h"
 #include "../Camera/Camera.h"
 #include "../Actor/Actor.h"
+#include "../AudioManager/AudioManager.h"
 #include "DxLib.h"
 
 Player::Player()
@@ -48,25 +49,28 @@ void Player::Initialize()
 
 void Player::Update(float dt)
 {
-    controller->Update(*this, camera);
+    controller->Update(*this, camera, dt);
     physics->Update(*this, stage, dt);
 
-    // ----- 足音判定 -----
+    // ----- 足音処理（ループ制御）-----
     float speed = VSize(velocity);
+    bool isMoving = (isGrounded && speed > 1.0f);
 
-    if (isGrounded && speed > 1.0f)
+    if (isMoving)
     {
-        isMakingNoise = true;
-
-        if (speed > 300.0f)      // 走り
-            noiseStrength = 600.0f;
-        else                     // 歩き
-            noiseStrength = 300.0f;
+        if (!isFootStepPlaying)
+        {
+            AudioManager::GetInstance().PlaySE(SEType::FootStep);
+            isFootStepPlaying = true;
+        }
     }
     else
     {
-        isMakingNoise = false;
-        noiseStrength = 0.0f;
+        if (isFootStepPlaying)
+        {
+            AudioManager::GetInstance().StopSE(SEType::FootStep);
+            isFootStepPlaying = false;
+        }
     }
 
     MV1SetPosition(modelHandle, position);

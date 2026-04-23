@@ -6,8 +6,8 @@ class Camera;
 class PlayerController
 {
 public:
-    void Update(Player& player, Camera* camera);
+    void Update(Player& player, Camera* camera, float dt);
 
 private:
-    float moveSpeed = 220.0f;
+    float moveSpeed = 360.0f;
 };
