@@ -1,5 +1,4 @@
 #include "GameScene.h"
-//
 #include "../AudioManager/AudioManager.h"
 
 GameScene::~GameScene() = default;
@@ -7,6 +6,9 @@ GameScene::~GameScene() = default;
 void GameScene::Initialize()
 {
     AudioManager::GetInstance().Initialize();
+    //âπó í≤êﬂ
+    AudioManager::GetInstance().SetBGMVolume(90);
+    AudioManager::GetInstance().SetSEVolume(SECategory::FootStep, 180);
 
     stage = std::make_unique<Stage>();
     player = std::make_unique<Player>();
@@ -31,7 +33,7 @@ void GameScene::Initialize()
     for (auto obj : objects)
         obj->Initialize();
 
-    AudioManager::GetInstance().PlayBGM(BGMType::Stage1);
+    AudioManager::GetInstance().PlayBGM(BGMType::GamaSceneBGM);
 }
 
 void GameScene::Update(float dt)

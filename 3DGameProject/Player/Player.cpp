@@ -52,6 +52,8 @@ void Player::Update(float dt)
     controller->Update(*this, camera, dt);
     physics->Update(*this, stage, dt);
 
+
+
     // ----- 足音処理（ループ制御）-----
     float speed = VSize(velocity);
     bool isMoving = (isGrounded && speed > 1.0f);
